@@ -20,6 +20,7 @@ Damit der Compiler die Module findet, sollten die Repositories nebeneinander im 
 dev/
 ├── euro/          <-- Dieses Repository (enthält euro.c, Makefile)
 └── mod/           <-- Das 'mod'-Repository (enthält upper.c)
+```text
 
 Das Tool kann über das universelle Makefile in jeder gängigen Umgebung gebaut werden:
 
