@@ -16,6 +16,7 @@ Zum Kompilieren wird noch mein https://github.com/Michael2211967/mod.git benöti
 
 Damit der Compiler die Module findet, sollten die Repositories nebeneinander im selben Entwicklungsordner liegen:
 
+```text
 dev/
 ├── euro/          <-- Dieses Repository (enthält euro.c, Makefile)
 └── mod/           <-- Das 'mod'-Repository (enthält upper.c)
