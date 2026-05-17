@@ -36,4 +36,8 @@ $(MOD_DIR)/tools.o: $(MOD_DIR)/tools.c $(MOD_DIR)/tools.h
 	$(CC) $(CFLAGS) -c $(MOD_DIR)/tools.c -o $(MOD_DIR)/tools.o
 
 clean:
-	$(RM) $(TARGET) *.o $(call FIX_PATH,$(MOD_DIR)/*.o)
+	$(RM) *.o $(call FIX_PATH,$(MOD_DIR)/*.o)
+
+# Der totale Kahlschlag – löscht auch das fertige Programm
+distclean: clean
+    $(RM) $(TARGET)
