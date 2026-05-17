@@ -21,7 +21,7 @@ endif
 CC = gcc
 CFLAGS = -Wall -O2 -s -I../mod
 MOD_DIR = ../mod
-OBJ = euro.o $(MOD_DIR)/upper.o
+OBJ = euro.o $(MOD_DIR)/upper.o $(MOD_DIR)/tools.o
 
 $(TARGET): $(OBJ)
 	$(CC) $(CFLAGS) -o $(TARGET) $(OBJ)
@@ -31,6 +31,9 @@ euro.o: euro.c
 
 $(MOD_DIR)/upper.o: $(MOD_DIR)/upper.c
 	$(CC) $(CFLAGS) -c $(MOD_DIR)/upper.c -o $(MOD_DIR)/upper.o
+
+$(MOD_DIR)/tools.o: $(MOD_DIR)/tools.c $(MOD_DIR)/tools.h
+	$(CC) $(CFLAGS) -c $(MOD_DIR)/tools.c -o $(MOD_DIR)/tools.o
 
 clean:
 	$(RM) $(TARGET) *.o $(call FIX_PATH,$(MOD_DIR)/*.o)
